@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway')
+*
+    margin 0
+    padding 0
+
+html
+body
+canvas
+    position fixed
+    top 0
+    left 0
+    width 100%
+    height 100%
+
+h1
+    position absolute
+    z-index 1
+    top 10%
+    left 50%
+    transform translate(-50%, -50%)
+    text-align center
+    color white
+    font-size 4rem
+    font-family 'Raleway', sans-serif
+    user-select none
+
+.leftA
+    z-index 1
+    width 5%
+    position fixed
+    top 43%
+    left 20%
+    transform rotate(180deg)
+    cursor pointer
+
+.rightA
+    z-index 1
+    width 5%
+    position fixed
+    top 43%
+    right 20%
+    cursor pointer
+
+.choose
+    z-index 1
+    position absolute
+    top 85%
+    left 50%
+    transform translate(-50%, -50%)
+    border solid white 2px
+    background none
+    color white
+    width 18%
+    height 6%
+    border-radius 50px
+    font-family 'Raleway', sans-serif
+    font-size 1.5rem
+    outline none
+    cursor pointer
+
+@keyframes fadeout 
+  0% 
+    opacity 1
+  20% 
+    opacity 0.8
+  40% 
+    opacity 0.6
+  60% 
+    opacity 0.4
+  80% 
+    opacity 0.2
+  100% 
+    opacity 0
+    
+.addFadeout
+    animation fadeout 0.6s ease-in 1 normal forwards
+
+.controlPannel
+    z-index 3
+    position fixed
+    right 0
+    width 4%
+    height 100%
+    background #1a1a1aab
+
+.controlPannelButtons
+    width 80%
+    height 11%
+    background #3e3d3d
+    border-radius 10px
+    border 3px #1a1a1a solid
+    cursor pointer
+
+.controlPannelButtons img
+    width 70%
+
+.buttonContainer
+    display flex
+    flex-direction column
+    justify-content space-around
+    align-items center
+    height 50%
+    width 100%
+    
+.controlPannelButtons:nth-child(1):hover
+    background grey
+
+.controlPannelButtons:nth-child(2):hover
+    background grey
+
+.controlPannelButtons:nth-child(3):hover
+    background grey
+
+.controlPannelButtons:nth-child(4):hover
+    background grey
+
+.controlPannelButtons:nth-child(5):hover
+    background grey
+
+.selected
+    border 2px green solid
+
+.info0, .info1, .info2, .info3, .info4
+    display none
+    position fixed
+    right 4%
+    top 1%
+    width 14%
+    height 17%
+    border-top-left-radius 20px
+    border-bottom-left-radius 20px
+    background #1a1a1aab
+    
+.info1
+    top 11%
+
+.info2
+    top 22%
+
+.info3
+    top 32%
+
+.info4
+    top 42%
+
+.controlPannelButtons:nth-child(1):hover .info0
+    display block
+
+.controlPannelButtons:nth-child(2):hover .info1
+    display block
+
+.controlPannelButtons:nth-child(3):hover .info2
+    display block
+
+.controlPannelButtons:nth-child(4):hover .info3
+    display block
+
+.controlPannelButtons:nth-child(5):hover .info4
+    display block
+
+.controlPannelButtons h2, .controlPannelButtons p
+    padding 4%
+    color white
+
+.dollarsCounter
+    opacity 0
+    z-index 1
+    width 7%
+    position fixed
+    top 2%
+    left 2%
+    display flex
+    flex-direction row
+    justify-content space-between
+    align-items center
+    color white
+
+.popCounter
+    opacity 0
+    z-index 1
+    width 7%
+    position fixed
+    top 2%
+    left 16%
+    display flex
+    flex-direction row
+    justify-content space-between
+    align-items center
+    color white
+
+.bg
+    z-index 3
+    position fixed
+    width 100%
+    height 100%
+    background #1a1a3dd1
+
+.message
+    z-index 3
+    display flex
+    align-items flex-start
+    justify-content space-around
+    position fixed
+    width 58%
+    height 54%
+    top 50%
+    left 50%
+    transform translate(-50%,-50%)
+    background black
+
+.message > img
+    padding-top 6%
+    width 23%
+
+.message > p
+    padding-top 6%
+    width 66%
+    color white
+    font-family 'Raleway', sans-serif
+    text-align justify
+    font-size 0.9rem
+    line-height 1.7
+
+
+.message > button 
+    z-index 1
+    position absolute
+    top 74%
+    left 40%
+    transform translate(-50%, -50%)
+    border solid white 2px
+    background none
+    color white
+    width 18%
+    height 7%
+    border-radius 50px
+    font-family 'Raleway', sans-serif
+    font-size .8rem
+    outline none
+    cursor pointer
+    transition 0.3s ease-in
+
+.message > button:hover
+    background white
+    color black
+
+.bgPopDoll
+    position absolute
+    z-index 0
+    background rgba(26,26,26,0.671)
+    width 26%
+    height 6%
+
+@media screen and (max-width 1441px)
+    .info0, .info1, .info2, .info3, .info4
+        display none
+        position fixed
+        right 4%
+        top 1%
+        width 14%
+        height 21.5%
+        border-top-left-radius 20px
+        border-bottom-left-radius 20px
+        background #1a1a1aab
+    
+    .info1
+        top 11%
+
+    .info2
+        top 22%
+
+    .info3
+        top 32%
+
+    .info4
+        top 42%
